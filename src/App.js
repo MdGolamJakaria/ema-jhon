@@ -7,7 +7,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+
 } from "react-router-dom";
 import Inventory from './conpunents/Inventory/Inventory';
 import Notfound from './conpunents/Notfound/Notfound';
@@ -22,7 +22,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]} className="App">
-        <Router>
+      <Router>
         <Header></Header>
         <Switch>
           <Route path="/shop">
@@ -31,7 +31,7 @@ function App() {
           <Route path='/review'>
             <Review></Review>
           </Route>
-          <PrivateRoute path='/menege'>
+          <PrivateRoute path='/orders'>
             <Inventory></Inventory>
           </PrivateRoute>
           <PrivateRoute path='/shipment'>
